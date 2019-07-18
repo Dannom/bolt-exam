@@ -1,0 +1,46 @@
+@import "../styles/variables";
+
+.top-header, .bottom-header {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+
+  .separator {
+    position: relative;
+    top: -1px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.bottom-header {
+  font-size: 20px;
+  justify-content: space-between;
+
+  .primary-title, .secondary-title, .arrow {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .secondary-title {
+    color: $light-blue;
+  }
+
+  .right-menu {
+    .icon-wrapper {
+      border-bottom: solid 3px #a3b2ff;
+      cursor: pointer;
+
+      &:last-child {
+        margin-left: 60px;
+      }
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

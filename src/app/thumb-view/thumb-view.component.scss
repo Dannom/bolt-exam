@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.grid-wrapper {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  //grid-template-rows: 80px auto 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+
+  .thumb-item-wrapper {
+    border: 1px solid $light-blue;
+    border-radius: 5px;
+  }
+}
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+
+  .pagination-previous, .pagination-next {
+    height: 32px;
+  }
+
+  .current-page {
+    margin: 0 10px;
+    height: 32px;
+  }
+}

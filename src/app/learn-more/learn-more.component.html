@@ -1,0 +1,50 @@
+<div class="page-margin">
+  <div class="top-section">
+    <div class="content">
+      <span class="title">
+        Z1800-48B4U
+      </span>
+      <span class="sub-title">
+        4U 48BAY STORAGE APPLIANCE
+      </span>
+      <ul class="content-list">
+        <li class="list-item">
+          <p>
+            48 x 3.5”/2.5" Hot-swap hard drives
+          </p>
+        </li>
+        <li class="list-item">
+          <p>
+            Hot-swap redundant high efficiency (>84%) power supply
+          </p>
+        </li>
+        <li class="list-item">
+          <p>
+            (1+1 module) maximizes server protection
+          </p>
+        </li>
+        <li class="list-item">
+          <p>
+            Connect up to 240 3Gb/s and 6Gb/s SATA and SAS devices ( Optional - Required compatible Raid controller )
+          </p>
+        </li>
+      </ul>
+    </div>
+    <img class="item-image" [src]="selectedImage" alt="image">
+  </div>
+  <div class="bottom-section">
+    <div class="grid-wrapper">
+      <div class="grid-images">
+        <div class="image-wrapper"
+             (click)="onImageClick(image)"
+             [ngClass]="{'selected' : selectedImage == image}"
+             *ngFor="let image of images">
+          <div *ngIf="selectedImage == image" class="triangle"></div>
+          <img class="image-item"
+               [src]="image" alt="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

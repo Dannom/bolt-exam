@@ -1,0 +1,65 @@
+<div class="page-margin list-view-item-wrapper">
+  <div class="product-content">
+    <div class="title-wrapper">
+      <span class="title">
+        4U 60BAY STORAGE JBOD
+      </span>
+      <span class="sub-title">
+        ZJ60B
+      </span>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, porro!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, porro!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, porro!
+    </p>
+    <button class="learn-more-button" (click)="onLearnMoreClick()">
+      Learn more
+      <i class="fas fa-arrow-circle-right arrow"></i>
+    </button>
+  </div>
+  <div class="product-images">
+    <div class="main-image">
+      <img [src]="selectedImage" alt="">
+    </div>
+    <div class="grid-wrapper">
+      <div class="grid-images">
+        <div class="image-wrapper"
+             (click)="onImageClick(image)"
+             [ngClass]="{'selected' : selectedImage == image}"
+             *ngFor="let image of images">
+          <div *ngIf="selectedImage == image" class="triangle"></div>
+          <img class="image-item"
+               [src]="image" alt="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="product-video">
+    <div class="title">
+      <span>
+        Product
+      </span>
+        <span>
+        Video
+      </span>
+      <i class="fas fa-chevron-right arrow"></i>
+    </div>
+    <div class="image">
+      <img [src]="images[0]" alt="">
+    </div>
+    <div class="content">
+        <p class="model">
+          ZJ60B
+        </p>
+      <p class="stats">
+        60 x 3.5”/2.5" Hot-swap hard drives
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="page-margin grid-wrapper">
+  <div class="thumb-item-wrapper" *ngFor="let image of images | paginate: config">
+    <app-thumb-view-item [image]="image"></app-thumb-view-item>
+  </div>
+</div>
+
+<pagination-template #p="paginationApi"
+                     [id]="config.id"
+                     (pageChange)="config.currentPage = $event">
+  <div class="custom-pagination">
+    <button (click)="p.previous()" class="pagination-previous" [disabled]="p.isFirstPage()">
+      <span> < </span>
+    </button>
+
+    <button class="current-page">
+        <span>{{ p.getCurrent() }}</span>
+    </button>
+
+    <button class="pagination-next" (click)="p.next()" [disabled]="p.isLastPage()">
+      <span> > </span>
+    </button>
+  </div>
+
+</pagination-template>
