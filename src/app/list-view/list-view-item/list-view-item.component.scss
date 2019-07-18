@@ -145,3 +145,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .list-view-item-wrapper {
+    flex-direction: column;
+    height: unset;
+
+    .product-images {
+      .main-image {
+        height: 120px;
+      }
+    }
+  }
+}
