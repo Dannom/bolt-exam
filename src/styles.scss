@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face{
+  font-family:'Montreal';
+  src: url('./assets/fonts/Montreal-regular.ttf');
+}
+
+body {
+  margin: 0 !important;
+}
+
+body * {
+  font-family:  'Montreal';
+  font-weight: normal;
+}
+
+body i {
+  font-family:'FontAwesome'!important;
+  font-style: normal !important;
+}
+
+.page-margin {
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 20px;
+}
